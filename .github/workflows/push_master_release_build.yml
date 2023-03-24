@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: Tag Name
+          tag_name: ${{ github.event.release.tag_name }}
           release_name: Release Name
       - name: Upload Release AAB
         id: upload_release_asset
